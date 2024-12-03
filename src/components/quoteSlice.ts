@@ -19,7 +19,7 @@ const initialState: QuoteState = {
 export const fetchRandomQuote = createAsyncThunk(
   "quotes/fetchRandomQuote",
   async (): Promise<{  judul: string , konten: string }> => {
-    const response = await axios.get("http://localhost:5000/api/quote");
+    const response = await axios.get("https://generate-quote-be.vercel.app/api/quote");
     return response.data;
   }
 );
